@@ -652,11 +652,14 @@ let newArray= arr.filter(cb,(element,[index, arr]))
 function namesGetter(airports, name, code){
   for(let i=0; i < arr.length; i++){
     if(airports[i].name === name){
-    console.log(airports[i].code)
+    console.log(airports[i].code);
+      if(airports[i].code === code){
+        console.log(airports[i].code);
+      }
     }
-  }return(`The index code for ${}`)
+  }return(`The index code for ${airports[i].name} is ${airports[i].code}`)
 }
-namesGetter(airports, 'Edinburgh')
+namesGetter(airports, 'Al Baha Airport', 'Ambler Airport', 'Abuja International Airport')
 
 /*TASK 7 🚀
 // Write a function that takes an airport code and returns the number of direct flights available */
